@@ -1,0 +1,186 @@
+#lab1 part 2 and 3 
+username=input('please eneter yourname')
+age = input ('please eneter your age')
+print(username, 'is',age,'years old')
+
+length =int(input("please enter a length")) 
+width  =int(input("please enter a width")) 
+area   = "length ** width" 
+print('Area:', area)
+perimeter = 2 * (length + width)
+print('Perimeter:', perimeter)
+
+
+# lab2 part 2, 3, 4, 5
+age = int(input("enter a age"))
+
+if age >= 18:
+    print("You are category A")
+elif age >= 16:
+    print("you are category B")
+else:
+    print ("you are in catagory c")
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Cannot divide by zero"
+
+while True:
+    print("Select operation:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exit")
+
+    choice = input("Enter choice (1, 2, 3, 4, 5): ")
+
+    if choice == '5':
+        print("Calculator exiting.")
+        break
+
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+        elif choice == '4':
+            result = divide(num1, num2)
+            print(num1, "/", num2, "=", result)
+    else:
+        print("Invalid input. Please enter a valid choice.")
+
+grade = int(input("enter a grade"))
+
+
+if grade >= 71:
+    print("congratulations you have earned a distinction")
+elif grade >= 61: 
+    print("you have achieved a merit ")
+elif grade >= 50:
+    print("you have achieved a pass")
+else: 
+    print ("you have failed")
+
+# ExamGrade2.py
+
+def calculate_grade(mark, level):
+    if mark < 1 or mark > 100:
+        print('Error: Marks must be between 1 and 100')
+        return
+
+    if level == 1:
+        if mark < 50:
+            print('Fail')
+        elif mark <= 60:
+            print('Pass')
+        elif mark <= 70:
+            print('Merit')
+        else:
+            print('Distinction')
+    elif level == 2:
+        if mark < 40:
+            print('Fail')
+        elif mark <= 50:
+            print('Pass')
+        elif mark <= 65:
+            print('Merit')
+        else:
+            print('Distinction')
+    else:
+        print('Error: Invalid level. Please enter 1 or 2.')
+
+if __name__ == "__main__":
+    try:
+        mark = int(input('Enter exam mark (1-100): '))
+        level = int(input('Enter student level (1 or 2): '))
+        calculate_grade(mark, level)
+    except ValueError:
+        print('Error: Please enter valid integers for mark and level.')
+
+# Pythagoras.py
+
+import math
+
+def calculate_side_a(b, c):
+    return math.sqrt(c**2 - b**2)
+
+def calculate_side_b(a, c):
+    return math.sqrt(c**2 - a**2)
+
+def calculate_side_c(a, b):
+    return math.sqrt(a**2 + b**2)
+
+if __name__ == "__main__":
+    print("Pythagoras's Theorem Calculator")
+    print("1. Calculate side A")
+    print("2. Calculate side B")
+    print("3. Calculate side C")
+
+    choice = input("Enter your choice (1, 2, or 3): ")
+
+    if choice == '1':
+        b = float(input("Enter the length of side B: "))
+        c = float(input("Enter the length of side C: "))
+        a = calculate_side_a(b, c)
+        print(f"The length of side A is: {a}")
+    elif choice == '2':
+        a = float(input("Enter the length of side A: "))
+        c = float(input("Enter the length of side C: "))
+        b = calculate_side_b(a, c)
+        print(f"The length of side B is: {b}")
+    elif choice == '3':
+        a = float(input("Enter the length of side A: "))
+        b = float(input("Enter the length of side B: "))
+        c = calculate_side_c(a, b)
+        print(f"The length of side C is: {c}")
+    else:
+        print("Invalid choice. Please enter 1, 2, or 3.")
+
+# lab 3 
+#i = 1
+
+#while i < 2001:
+#    if i == 3:
+#        break
+#    print(i)
+#    i *= 2
+
+# Factorial.py
+
+#def calculate_factorial(num):
+#    factorial = 1
+#    while num > 0:
+#        factorial *= num
+#        num -= 1
+#    return factorial
+
+#if __name__ == "__main__":
+#    try:
+#        num = int(input("Enter an integer: "))
+#        if num < 0:
+#            print("Factorial is not defined for negative numbers.")
+#        else:
+#            result = calculate_factorial(num)
+#            print(f"The factorial of {num} is {result}")
+#    except ValueError:
+#        print("Invalid input. Please enter an integer.")
+
+
+
+
